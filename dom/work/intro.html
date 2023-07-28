@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="title">Document Object Model</h1>
+    <a id="link">Some cool link</a>
+    <p class="subtitle">Hello World!</p>
+    <p>Here is a
+        <a href="#">link</a>
+    </p>
+    <script>
+        document.documentElement.lastChild
+        document.documentElement.firstChild
+        document.documentElement.childNodes
+        //NodeList(3) [head, text, body]
+        /*
+        Todos los nodos tienen una propiedad parentNode que apunta al nodo que lo contiene. La propiedad childNodes apunta a un objeto parecido a un arreglo que contiene los hijos del nodo. Las propiedades firstChild y lastChild apuntan al primer y último nodo hijo respectivamente o null si no tienen. De igual forma, previousSibling y nextSibling apuntan a los nodos hermanos, es decir, los nodos adyacentes que comparten el mismo padre.
+        */
+        const link = document.body.getElementsByTagName('a')[0];
+
+        console.log(link);  //  <a href="#">link</a>
+
+        const title = document.getElementById('title');
+        console.log(title); // <h1 id="title">Document Object Model</h1>
+
+
+        const subtitle = document.body.getElementsByClassName('subtitle')[0];
+        console.log(subtitle); // <p class="subtitle">Hello World!</p>
+
+        const h3 = document.createElement('h3');
+
+        console.log(h3);  // <h1></h1>
+
+
+        //
+        const text = document.createTextNode('Hello World');
+
+        console.log(text);  // 'Hello World'
+
+        h3.appendChild(text);
+
+        console.log(h3);  // <h1>Hello World</h1>
+
+        //Atributos
+        const link2=document.getElementById('link');
+        link2.href="https://google.com";
+        link2.className="style-name";
+        console.log(link2);
+
+    </script>
+</body>
+
+</html>

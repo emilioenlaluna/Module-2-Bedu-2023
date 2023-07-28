@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <blockquote id="quote">
+        No book can ever be finished. While working on it we learn
+        just enough to find it immature the moment we turn away
+        from it.
+    </blockquote>
+
+    <script>
+        /*
+        function crearNodo(type,child){
+
+        }*/
+        const CrearNodo=(type,child)=>{
+            const node=document.createElement(type);
+             const text=document.createTextNode(child);
+             node.appendChild(text);
+             return node;
+        }
+        console.log(CrearNodo('h1','saludos'))
+    </script>
+</body>
+
+</html>
