@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="texto">emilioenlaluna</h1>
+  <button id="color-red">Red</button>
+  <button id="color-green">Green</button>
+  <button id="color-blue">Blue</button>
+  <script>
+    const text=document.querySelector("#texto");
+    const red=document.getElementById("color-red");
+
+    red.addEventListener("click",()=>{
+        text.style="color:red;";
+    })
+  </script>
+</body>
+</html>

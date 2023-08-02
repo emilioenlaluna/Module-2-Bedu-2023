@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto-boton">Botton:</p>
+    <button id="boton">Lorem ipsum dolor sit amet.</button>
+    <script>
+        const boton=document.getElementById("boton");
+        const texto=document.getElementById("texto-boton");
+       
+        boton.addEventListener("mousedown",(event)=>{
+if(event.button==0){
+console.log("boton izquierdo")
+texto.innerHTML="boton izquierdo"
+}else if(event.button==1){
+console.log("boton cetral")
+texto.innerHTML="boton cetral"
+}else if(event.button==2
+){
+    console.log("boton derecho")
+    texto.innerHTML="boton derecho"
+
+}else{
+    console.log("otro")
+}
+        })
+    </script>
+</body>
+</html>
